@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All lists</title>
+</head>
+<body> 
+    <div>
+    <h1>TO-DO-LISTS</h1>
+    <% for(list of lists){%>
+    
+       <ul> <li><%=list.content%>  <a  href="http://localhost:7070/to-do-lists/<%=list.content%>/edit"> <button>edit</button></a>  
+            
+        
+    </li>     <form method="post" action="http://localhost:7070/to-do-lists/<%=list.content%>?_method=DELETE" > 
+    <button>delete</button>
+   </form>        
+    </ul> 
+ 
+<%}%>    
+
+    </div>
+
+<a href="http://localhost:7070/to-do-lists/new"><button> Add New task</button></a>
+
+            
+</body>
+</html>
